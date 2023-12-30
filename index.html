@@ -1,1 +1,130 @@
-My link in bio
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <style>
+
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .banner {
+        display: flex;
+        justify-content: center;
+      }
+
+      .banner-image {
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border-radius: 128px;
+      }
+
+      .thumbnail {
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        object-fit: cover;
+      }
+
+      body {
+        background-color: #004643;
+        display: flex;
+        justify-content:center;
+      }
+
+      .name {
+        color: #fffffe;
+        display: flex;
+        justify-content: center;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .social-icons a{
+        color: #fffffe;
+        text-decoration:none;
+      }
+
+      .link {
+        background-color: #f9bc60;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+      }
+
+      .link a {
+        color: #001e1d;
+        text-decoration: none;
+        text-align: center;
+        flex-grow: 1;
+      }
+
+      .items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 640px;
+        flex-grow: 1;
+      }
+
+      .items div {
+        margin-top: 30px;
+      }
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="items">
+
+      <div class="banner">
+        <img src="/thumbnails/profile_icon.png" alt=""  class="banner-image"/>
+      </div>
+  
+      <div class="name">
+        John Karuntzos
+      </div>
+  
+      <div class="social-icons">
+        <a href="https://github.com/john-karuntzos" target="_blank">
+          GitHub
+        </a>
+  
+        <a href="https://linkedin.com/in/john-karuntzos" target="_blank">
+          LinkedIn
+        </a>
+  
+        <a href="https://instagram.com" target="_blank">
+          Instagram
+        </a>
+  
+        <a href="https://twitter.com" target="_blank">
+          Twitter
+        </a>
+      </div>
+  
+      <div class="link">
+        <img class="thumbnail" src="/thumbnails/github_logo.png">
+        <a target="_blank" href="https://github.com/john-karuntzos">My Github!</a>
+      </div>
+  
+      <div class="link">
+        <img class="thumbnail" src="/thumbnails/linkedin_logo.png">
+        <a target="_blank" href="https://linkedin.com/in/john-karuntzos">My LinkedIn!</a>
+      </div>
+
+    </div>
+    
+
+  </body>
+
+</html>
