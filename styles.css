@@ -21,14 +21,14 @@ body {
 
 .banner::before {
   content: "";
-  background-color: #3299f3;
+  background-color: transparent;
   position: absolute;
   top: 17%;
   width: 0px;
   height: 0px;
   border-radius: 50%;
   z-index: -1;
-  box-shadow: 0 0 70px 70px #3299f3;
+  box-shadow: 0 0 70px 50px #3299f3;
 }
 
 .banner-image {
@@ -39,19 +39,17 @@ body {
   /*box-shadow: 0 0 15px 15px #3299f3;*/
 }
 
-
-
-@keyframes colorChange {
-  0% { box-shadow: 0 0 70px 70px #3299f3; } 
-  20% { box-shadow: 0 0 70px 70px #32f3d3; }
-  40% { box-shadow: 0 0 70px 70px #32f335; } 
-  60% { box-shadow: 0 0 70px 70px #e9f332; }
-  80% { box-shadow: 0 0 70px 70px #f35932; }
-  100% { box-shadow: 0 0 70px 70px #3299f3;; } 
+@keyframes initialColorChange {
+  0% { box-shadow: 0 0 70px 50px #3299f3; } 
+  20% { box-shadow: 0 0 70px 50px #32f3d3; }
+  40% { box-shadow: 0 0 70px 50px #32f335; } 
+  60% { box-shadow: 0 0 70px 50px #e9f332; }
+  80% { box-shadow: 0 0 70px 50px #f35932; }
+  100% { box-shadow: 0 0 70px 50px #3299f3; } 
 }
 
 .banner::before {
-  animation: colorChange 10s infinite;
+  animation: initialColorChange 10s infinite;
 }
 
 .thumbnail {
@@ -82,8 +80,17 @@ body {
   text-decoration: none;
 }
 
+@keyframes socialIconsHoverChange {
+  0% { text-shadow: 0 0 25px #3299f3; } 
+  20% { text-shadow: 0 0 25px #32f3d3; }
+  40% { text-shadow: 0 0 25px #32f335; } 
+  60% { text-shadow: 0 0 25px #e9f332; }
+  80% { text-shadow: 0 0 25px #f35932; }
+  100% { text-shadow: 0 0 25px #3299f3; } 
+}
+
 .social-icons a:hover {
-  text-shadow: 0 0 15px #3299f3;
+  animation: socialIconsHoverChange 5s infinite;
 }
 
 
