@@ -3,11 +3,32 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
+  background: linear-gradient(rgb(0, 45, 80),rgb(1, 8, 12));
+  /*background-color: #16161a;
+  background-image: url(/thumbnails/background-blue.png);*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content:center;
 }
+
 
 .banner {
   display: flex;
   justify-content: center;
+}
+
+.banner::before {
+  content: "";
+  background-color: #3299f3;
+  position: absolute;
+  top: 17%;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow: 0 0 70px 70px #3299f3;
 }
 
 .banner-image {
@@ -15,7 +36,22 @@ body {
   height: 128px;
   object-fit: cover;
   border-radius: 128px;
-  box-shadow: 0 0 15px 15px #3299f3;
+  /*box-shadow: 0 0 15px 15px #3299f3;*/
+}
+
+
+
+@keyframes colorChange {
+  0% { box-shadow: 0 0 70px 70px #3299f3; } 
+  20% { box-shadow: 0 0 70px 70px #32f3d3; }
+  40% { box-shadow: 0 0 70px 70px #32f335; } 
+  60% { box-shadow: 0 0 70px 70px #e9f332; }
+  80% { box-shadow: 0 0 70px 70px #f35932; }
+  100% { box-shadow: 0 0 70px 70px #3299f3;; } 
+}
+
+.banner::before {
+  animation: colorChange 10s infinite;
 }
 
 .thumbnail {
@@ -25,11 +61,6 @@ body {
   object-fit: cover;
 }
 
-body {
-  background-color: #16161a;
-  display: flex;
-  justify-content:center;
-}
 
 .name {
   color: #fffffe;
@@ -42,13 +73,19 @@ body {
 .social-icons {
   display: flex;
   justify-content: space-around;
+  font-size: 20px;
 }
 
 .social-icons a{
   color: #fffffe;
   font-weight: bold;
-  text-decoration:none;
+  text-decoration: none;
 }
+
+.social-icons a:hover {
+  text-shadow: 0 0 15px #3299f3;
+}
+
 
 .link {
   display: flex;
